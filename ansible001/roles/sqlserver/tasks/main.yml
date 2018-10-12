@@ -1,2 +1,8 @@
 ---
-# tasks file for sqlserver
+- tasks:
+     - name: instalacion de mysql
+       apt: name={{name}}
+
+       with_items:
+         - python-mysqldb
+         - mysql-server
