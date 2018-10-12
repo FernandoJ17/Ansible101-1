@@ -1,2 +1,9 @@
 ---
-# defaults file for sqlserver
+- hosts: dbservers
+  tasks:
+     - name: instalacion de mysql
+       apt: name={{name}}
+
+       with_items:
+         - python-mysqldb
+         - mysql-server
